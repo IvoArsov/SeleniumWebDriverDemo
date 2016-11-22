@@ -12,3 +12,6 @@ C:\Users\Valeri\Documents\Visual Studio 2015\Projects\Solution1\webDriverDemo\bi
 C:\Users\Valeri\Documents\Visual Studio 2015\Projects\Solution1\webDriverDemo\bin\Debug\chromedriver-license.txt
 C:\Users\Valeri\Documents\Visual Studio 2015\Projects\Solution1\webDriverDemo\bin\Debug\nunit.framework.dll
 C:\Users\Valeri\Documents\Visual Studio 2015\Projects\Solution1\webDriverDemo\bin\Debug\nunit.framework.xml
+C:\Users\Valeri\Documents\Visual Studio 2015\Projects\Solution1\webDriverDemo\bin\Debug\Excel.dll
+C:\Users\Valeri\Documents\Visual Studio 2015\Projects\Solution1\webDriverDemo\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Valeri\Documents\Visual Studio 2015\Projects\Solution1\webDriverDemo\bin\Debug\Excel.pdb

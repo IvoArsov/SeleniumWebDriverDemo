@@ -8,47 +8,36 @@ using OpenQA.Selenium.Support.UI;
 
 namespace webDriverDemo
 {
-    class SeleniumSetMethods 
+    public static class SeleniumSetMethods 
     {
 
-        //Enter text
-        public static void EnterText(string element , string value , PropertyType elementType )
+        /// <summary>
+        /// Extended method for entering text in the contol
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="value"></param>
+        public static void EnterText(this IWebElement element, string value)
         {
-            if (elementType == PropertyType.Id)
-            {
-                PropertiesCollection.driver.FindElement(By.Id(element)).SendKeys(value);
-            }
-            if (elementType == PropertyType.Name)
-            {
-                PropertiesCollection.driver.FindElement(By.Name(element)).SendKeys(value);
-            }
+            element.SendKeys(value);
         }
 
-        //Click into a btn, checkbox, option ect.
-        public static void Click(string element, PropertyType elementType)
+        /// <summary>
+        /// Click into a button, checkbox, option ect.
+        /// </summary>
+        /// <param name="element"></param>
+        public static void Clicks(this IWebElement element)
         {
-            if (elementType == PropertyType.Id)
-            {
-                PropertiesCollection.driver.FindElement(By.Id(element)).Click();
-            }
-            if (elementType == PropertyType.Name)
-            {
-                PropertiesCollection.driver.FindElement(By.Name(element)).Click();
-            }
+            element.Click();
         }
 
-        //Selecting a DropDown control
-        public static void SelectDropDown(string element, string value, PropertyType elementType)
+        /// <summary>
+        /// Selecting a DropDown control
+        /// </summary>
+        /// <param name="element"></param>
+        /// <param name="value"></param>
+        public static void SelectDropDown(this IWebElement element, string value)
         {
-            if (elementType == PropertyType.Id)
-            {
-                new SelectElement(PropertiesCollection.driver.FindElement(By.Id(element))).SelectByText(value);
-            }
-            if (elementType == PropertyType.Name)
-            {
-                //FindElement returns IWebElement!!!
-                new SelectElement(PropertiesCollection.driver.FindElement(By.Name(element))).SelectByText(value);
-            }
+           new SelectElement(element).SelectByText(value);
         }        
     }
 }
